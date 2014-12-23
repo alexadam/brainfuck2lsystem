@@ -1,0 +1,108 @@
+
+<html>
+    <head>
+        <title>Brainfuck to L-System</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="js/ls.js"></script>
+        <script src="js/engine.js"></script>
+    </head>
+    <body>
+        <div class="panel">
+            <textarea id="bfsource" cols="100" rows="10">,>,[<+>-]<.</textarea>
+            <h4>Translate Options:</h4>
+            <label>> = </label>
+            <select id="translate-gt">
+                <option value="F" selected="">F</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="[">[</option>
+                <option value="]">]</option>
+            </select>
+            <br>
+            <label>< = </label>
+            <select id="translate-lt">
+                <option value="F" selected="">F</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="[">[</option>
+                <option value="]">]</option>
+            </select>
+            <br>
+            <label>+ = </label>
+            <select id="translate-plus">
+                <option value="F">F</option>
+                <option value="+" selected="">+</option>
+                <option value="-">-</option>
+                <option value="[">[</option>
+                <option value="]">]</option>
+            </select>
+            <br>
+            <label>- = </label>
+            <select id="translate-minus">
+                <option value="F">F</option>
+                <option value="+">+</option>
+                <option value="-" selected="">-</option>
+                <option value="[">[</option>
+                <option value="]">]</option>
+            </select>
+            <br>
+            <label>[ = </label>
+            <select id="translate-so">
+                <option value="F">F</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="[" selected="">[</option>
+                <option value="]">]</option>
+            </select>
+            <br>
+            <label>] = </label>
+            <select id="translate-sc">
+                <option value="F">F</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="[">[</option>
+                <option value="]" selected="">]</option>
+            </select>
+            <br>
+            <label>. = </label>
+            <select id="translate-output">
+                <option value="F" selected="">F</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="[">[</option>
+                <option value="]">]</option>
+            </select>
+            <br>
+            <label>, = </label>
+            <select id="translate-input">
+                <option value="F" selected="">F</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="[">[</option>
+                <option value="]">]</option>
+            </select>
+            <br>
+            <input type="button" value="Translate to BF" name="translate" onclick="translate2bf()" />
+            <br>
+            <h4>Translated Code</h4>
+            <textarea id="transcode" cols="100" rows="10"></textarea>
+            <br>
+            <input type="button" value="Render" name="render" />
+            <br>
+            <label>Angle</label>
+            <input type="text" id="angle" value="60"/>
+            <label>Scale</label>
+            <input type="text" id="scale" value="20"/>
+            <br>
+            <input type="button" value="Render" name="render" onclick="render()" />
+            <br>
+            <canvas id="canvas" height="1000" width="1000"></canvas>
+            <!--,>,[<+>-]<------------------------------------------------.-->
+            <!--,>,[<+>-]<.-->
+
+
+        </div>
+    </body>
+</html>
