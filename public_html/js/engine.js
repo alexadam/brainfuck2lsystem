@@ -22,6 +22,7 @@ function translate2bf() {
     translatedBfCode = translatedBfCode.replace(/\]/g, scsym);
     translatedBfCode = translatedBfCode.replace(/\./g, inputsym);
     translatedBfCode = translatedBfCode.replace(/,/g, outputsym);
+    translatedBfCode = translatedBfCode.replace(/\s+/g, "");
     
     $("#transcode").val(translatedBfCode);
 }
