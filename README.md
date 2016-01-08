@@ -2,10 +2,9 @@
 
 Translate Brainfuck to L-System by using a custom mapping between their instructions
 
-Demo: https://alexadam.github.io/demos/brainfuck2lsystem/index.html
+*Demo*: https://alexadam.github.io/demos/brainfuck2lsystem/index.html
 
-What is Brainfuck: https://en.wikipedia.org/wiki/Brainfuck
-
+What is Brainfuck: https://en.wikipedia.org/wiki/Brainfuck  
 What is L-System: https://en.wikipedia.org/wiki/L-system
 
 ## Examples
